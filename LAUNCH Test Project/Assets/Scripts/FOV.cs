@@ -12,16 +12,13 @@ namespace CameraToolkit
 
         public void Start()
         {
-			mainSlider.value = Camera.main.fieldOfView / 179;
-
+			mainSlider.maxValue = 179;
+			mainSlider.value = Camera.main.fieldOfView;
 		}
 
         public void SliderMoved()
 		{
-			
-			Camera.main.fieldOfView = Mathf.MoveTowards(Camera.main.fieldOfView, mainSlider.value*179, Time.deltaTime * speed);
-
-			Debug.Log(mainSlider.value * 179);
+			Camera.main.fieldOfView = Mathf.MoveTowards(Camera.main.fieldOfView, mainSlider.value, Time.deltaTime * speed);
 		}
 	}
 }
