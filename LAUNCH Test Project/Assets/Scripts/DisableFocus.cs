@@ -5,19 +5,26 @@ namespace CameraToolkit
 {
 	public class DisableFocus : MonoBehaviour
 	{
+
 		[SerializeField]
-		private Focus focus;
+		Toggle toggle;
 
-        [SerializeField]
-        private Toggle toggle;
+		[SerializeField]
+		Focus focus;
 
-        public void ToggleValueChanged()
+        private void Start()
+        {
+            toggle.onValueChanged.AddListener(delegate
+            {
+                ToggleValueChanged();
+            });
+        }
+        private void ToggleValueChanged()
         {
             if (toggle.isOn == false)
             {
                 focus.enabled = false;
             }
         }
-
     }
 }
