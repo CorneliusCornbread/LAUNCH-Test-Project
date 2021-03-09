@@ -6,17 +6,23 @@ namespace CameraToolkit
 	public class FOV : MonoBehaviour
 	{
 		[SerializeField]
+		private Camera camera;
+		[SerializeField]
 		private Slider mainSlider;
 		[SerializeField]
-		private int speed;
+		private int speed = 250;
 
-        public void Start()
+        private void Start()
         {
+
+			mainSlider.onValueChanged.AddListener(delegate { SliderMoved(); });
+
 			mainSlider.maxValue = 179;
-			mainSlider.value = Camera.main.fieldOfView;
+			Debug.Log(camera.fieldOfView);
+			mainSlider.value = camera.fieldOfView;
 		}
 
-        public void SliderMoved()
+        private void SliderMoved()
 		{
 			Camera.main.fieldOfView = Mathf.MoveTowards(Camera.main.fieldOfView, mainSlider.value, Time.deltaTime * speed);
 		}

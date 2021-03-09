@@ -6,22 +6,21 @@ namespace CameraToolkit
 	public class ChangePosition : MonoBehaviour
 	{
 		[SerializeField]
-		private Button increaseXButton;
+		public Button XPlusButton;
 
 		[SerializeField]
-		private Button decreaseXButton;
+		private Button XMinusButton;
 
 		[SerializeField]
-		private Button increaseYButton;
+		private Button YPlusButton;
 
 		[SerializeField]
-		private Button decreaseYButton;
+		private Button YMinusButton;
 
 		[SerializeField]
-		private Button increaseZButton;
+		private Button ZPlusButton;
 
 		[SerializeField]
-		private Button decreaseZButton;
-
-	}
+		private Button ZMinusButton;
+    }
 }

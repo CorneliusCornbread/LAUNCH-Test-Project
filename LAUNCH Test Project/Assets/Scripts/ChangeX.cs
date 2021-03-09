@@ -1,17 +1,28 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
 namespace CameraToolkit
 {
 	public class ChangeX : MonoBehaviour
 	{
 
-		public void OnButtonXRightPressed()
+		[SerializeField]
+		private Button XPlus, XMinus;
+
+		void Start()
+		{
+			XPlus.onClick.AddListener(OnXPlusPressed);
+			XMinus.onClick.AddListener(OnXMinusPressed);
+		}
+
+		public void OnXPlusPressed()
 		{
 			transform.position = new Vector3(transform.position.x + 1, transform.position.y,
 				transform.position.z);
 		}
 
-		public void OnButtonXLeftPressed()
+		public void OnXMinusPressed()
 		{
 			transform.position = new Vector3(transform.position.x - 1, transform.position.y, transform.position.z);
 		}
