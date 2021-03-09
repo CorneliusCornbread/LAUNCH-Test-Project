@@ -8,9 +8,15 @@ namespace CameraToolkit
 	{
 
 		[SerializeField]
+<<<<<<< Updated upstream
 		private Button XPlus, XMinus;
 
 		void Start()
+=======
+		private Button XPlus, XMinus;
+
+		private void Start()
+>>>>>>> Stashed changes
 		{
 			XPlus.onClick.AddListener(OnXPlusPressed);
 			XMinus.onClick.AddListener(OnXMinusPressed);
