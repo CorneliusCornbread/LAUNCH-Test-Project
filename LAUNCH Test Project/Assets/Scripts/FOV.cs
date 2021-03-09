@@ -1,28 +1,27 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace CameraToolkit
 {
-	public class FOV : MonoBehaviour
-	{
-		[SerializeField]
-		private Slider mainSlider;
-		[SerializeField]
-		private int speed = 250;
+    public class FOV : MonoBehaviour
+    {
+        [SerializeField]
+        private Slider mainSlider;
+        [SerializeField]
+        private int speed = 250;
 
-        private void Start()
+        public void Start()
         {
+            mainSlider.maxValue = 179;
+            mainSlider.value = 55;
+            mainSlider.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
+        }
 
-			mainSlider.onValueChanged.AddListener(delegate { SliderMoved(); });
-
-			mainSlider.maxValue = 179;
-			Debug.Log("HI");
-			mainSlider.value = Camera.main.fieldOfView;
-		}
-
-        private void SliderMoved()
-		{
-			Camera.main.fieldOfView = Mathf.MoveTowards(Camera.main.fieldOfView, mainSlider.value, Time.deltaTime * speed);
-		}
-	}
+        
+        public void ValueChangeCheck()
+        {
+            Camera.main.fieldOfView = Mathf.MoveTowards(Camera.main.fieldOfView, mainSlider.value, Time.deltaTime * speed);
+        }
+    }
 }

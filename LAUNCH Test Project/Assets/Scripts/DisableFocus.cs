@@ -14,6 +14,7 @@ namespace CameraToolkit
 
         private void Start()
         {
+            focus.enabled = false;
             toggle.onValueChanged.AddListener(delegate
             {
                 ToggleValueChanged();
@@ -24,6 +25,9 @@ namespace CameraToolkit
             if (toggle.isOn == false)
             {
                 focus.enabled = false;
+            } else
+            {
+                focus.enabled = true;
             }
         }
     }

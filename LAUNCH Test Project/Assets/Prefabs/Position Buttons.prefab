@@ -1179,7 +1179,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4436917252738185565}
-  - component: {fileID: 3118104985381481250}
   m_Layer: 5
   m_Name: Position Buttons
   m_TagString: Untagged
@@ -1212,24 +1211,6 @@ RectTransform:
   m_AnchoredPosition: {x: 6, y: -29}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3118104985381481250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8314116713597794933}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51ff7aa91ce5dca4984e3e570612b416, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  increaseXButton: {fileID: 4400451157675023276}
-  decreaseXButton: {fileID: 3047010966381285366}
-  increaseYButton: {fileID: 8183447401927036261}
-  decreaseYButton: {fileID: 9008102674623018623}
-  increaseZButton: {fileID: 639901573599298007}
-  decreaseZButton: {fileID: 6021901137117813067}
 --- !u!1 &8404406889424568802
 GameObject:
   m_ObjectHideFlags: 0
