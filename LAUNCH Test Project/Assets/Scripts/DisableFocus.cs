@@ -22,13 +22,7 @@ namespace CameraToolkit
         }
         private void ToggleValueChanged()
         {
-            if (toggle.isOn == false)
-            {
-                focus.enabled = false;
-            } else
-            {
-                focus.enabled = true;
-            }
+            focus.enabled = toggle.isOn;
         }
     }
 }
